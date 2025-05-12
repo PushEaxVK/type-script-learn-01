@@ -70,3 +70,34 @@ const user2: { name: string; age: number } = {
   age: 30
 };
 use(user2);
+
+// type User
+type User = {
+  name: string;
+  age: number;
+};
+
+const user3: User = {
+  name: 'Tom',
+  age: 30
+};
+
+const userJack: User = {
+  name: 'Jack',
+  age: 25
+};
+
+use(user3, userJack);
+
+// interface
+interface NewUser {
+  name: string;
+  age: number;
+}
+
+const user4: NewUser = {
+  name: 'Tom',
+  age: 30
+};
+
+use(user4);

@@ -29,3 +29,13 @@ function fetchUserData(id: string, callback: (data: any) => void): void {
 }
 
 fetchUserData('123', use);
+
+// unknown
+function fetchSomeData() {
+  return 'Tom';
+}
+
+const userData: unknown = fetchSomeData();
+if (typeof userData === 'string') {
+  console.log(userData.toUpperCase());
+}

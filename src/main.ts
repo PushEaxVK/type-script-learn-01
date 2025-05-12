@@ -41,8 +41,8 @@ const notParam1 = undefined;
 use(num, str, bool, empty2, notParam1);
 
 function foo(num: number, str: string, bool: boolean, empty: null) {
-  use(num, str, bool, empty);
   // Some logic
+  use(num, str, bool, empty);
 }
 foo(1, 'String', false, null);
 
@@ -52,3 +52,21 @@ function foo2(num = 10, str = 'Some string', bool = true, empty = null) {
   use(num, str, bool, empty);
 }
 foo2();
+
+// Складні типи даних
+
+// object
+const obj: object = {};
+// eslint-disable-next-line @typescript-eslint/no-empty-object-type
+const obj2: {} = {};
+const user = {
+  name: 'Tom',
+  age: 30
+};
+use(obj, obj2, user);
+
+const user2: { name: string; age: number } = {
+  name: 'Tom',
+  age: 30
+};
+use(user2);

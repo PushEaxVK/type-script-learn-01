@@ -1,5 +1,5 @@
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
-function use(...params: any[]): void {
+export function use(...params: any[]): void {
   void params;
 }
 

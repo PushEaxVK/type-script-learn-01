@@ -101,3 +101,42 @@ const user4: NewUser = {
 };
 
 use(user4);
+
+// array
+const arrString: string[] = ['Hello', 'Hu'];
+const arrNumber: number[] = [1, 2, 3];
+use(arrString, arrNumber);
+
+// матриця
+const matrix: number[][] = [
+  [1, 2],
+  [3, 4]
+];
+// різні типи
+const mixed: (number | string)[] = [1, 'two'];
+// generic
+const numbers: Array<number> = [1, 2, 3, 4, 5];
+
+use(matrix, mixed, numbers);
+
+// Масив об'єктів
+const users: {
+  name: string;
+  age: number;
+}[] = [
+  { name: 'Tom', age: 30 },
+  { name: 'Jack', age: 25 },
+  { name: 'Alice', age: 32 }
+];
+use(users);
+
+const users2: User[] = [
+  { name: 'Tom', age: 30 },
+  { name: 'Jack', age: 25 },
+  { name: 'Alice', age: 32 }
+];
+use(users2);
+
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+const arrayAny: any[] = [123, 'TEXT', { name: 'Tom' }, [1, 2, 3]];
+use(arrayAny);
